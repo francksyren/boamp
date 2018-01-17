@@ -1,0 +1,289 @@
+<mvc:View
+	controllerName="sap.ui.demo.wt.controller.Detail"
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>detailPageTitle}">
+		<ObjectHeader
+			title="{/gestion/indexation/resumeobjet}"
+			number="{/gestion/reference/idweb}">
+		<statuses>
+			<ObjectStatus
+				text="{/gestion/indexation/datepublication}"
+				state="None" />
+		</statuses>
+		</ObjectHeader>
+		<f:SimpleForm id="SimpleFormDisplay1"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Modèle 01"
+			labelSpanXL="3"
+			labelSpanL="4"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="2"
+			emptySpanM="2"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Identite / denomination" />
+				<Text text="{/donnees/identite/denomination}" />
+				<Label text="Identite / cp" />
+				<Text text="{/donnees/identite/cp}" />
+			</f:content>
+		</f:SimpleForm>
+		<f:SimpleForm id="SimpleFormDisplay2"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Modèle 02"
+			labelSpanXL="3"
+			labelSpanL="4"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="2"
+			emptySpanM="2"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Objet / Type marché / objet complet" />
+				<Text text="{/donnees/objet/0/objetcomplet}" />
+				<Label text="Objet / Type marché / travaux" />
+				<Text text="{/donnees/objet/0/typemarche/travaux}" />
+				<Label text="Objet / Type marché / fournitures" />
+				<Text text="{/donnees/objet/0/typemarche/fournitures}" />
+				<Label text="Objet / Type marché / service" />
+				<Text text="{/donnees/objet/0/typemarche/service}" />
+				<Label text="Objet / CPV / principal" />
+				<Text text="{/donnees/objet/0/cpv/0/principal}" />
+				
+				<Label text="Objet / Caracteristiques / principales" />
+				<Text text="{/donnees/objet/0/caracteristiques/principales}" />
+
+				<Label text="Objet / Caracteristiques / quantite" />
+				<Text text="{/donnees/objet/0/caracteristiques/quantite}" />
+				<Label text="Objet / Caracteristiques / valeurtotale" />
+				<Text text="{/donnees/objet/0/caracteristiques/valeurtotale}" />
+				<Label text="Objet / Caracteristiques / valeur" />
+				<Text text="{/donnees/objet/0/caracteristiques/valeur}" />
+				<Label text="Objet / Caracteristiques / valeurmin" />
+				<Text text="{/donnees/objet/0/caracteristiques/valeurmin}" />
+				<Label text="Objet / Caracteristiques / valeurmax" />
+				<Text text="{/donnees/objet/0/caracteristiques/valeurmax}" />
+				<Label text="Objet / Caracteristiques / titre" />
+				<Text text="{/donnees/objet/0/caracteristiques/titre}" />
+				<Label text="Objet / Caracteristiques / table" />
+				<Text text="{/donnees/objet/0/caracteristiques/table}" />
+				<Label text="Objet / Caracteristiques / options " />
+				<Text text="{/donnees/objet/0/caracteristiques/options}" />
+				<Label text="Objet / Caracteristiques / reconductions" />
+				<Text text="{/donnees/objet/0/caracteristiques/reconductions}" />
+				
+				<Label text="Objet / Divenlots / oui" />
+				<Text text="{/donnees/objet/0/divenlots/oui}" />
+				<Label text="Objet / Divenlots / offreun" />
+				<Text text="{/donnees/objet/0/divenlots/offreun}" />
+				<Label text="Objet / Divenlots / offreplusieurs" />
+				<Text text="{/donnees/objet/0/divenlots/offreplusieurs}" />
+				<Label text="Objet / Divenlots / offretous" />
+				<Text text="{/donnees/objet/0/divenlots/offretous}" />
+				<Label text="Objet / Divenlots / non" />
+				<Text text="{/donnees/objet/0/divenlots/non}" />
+				
+				<Label  text="Objet / Lots" />
+				<VBox items="{/donnees/objet/0/lots/lot}">
+					<VBox>
+					<HBox>
+						<Label text="num" />
+						<Text text="{num}" />
+					</HBox>
+					<HBox>
+						<Label text="description" />
+						<Text text="{description}" />
+					</HBox>
+					<HBox>
+						<Label text="criteresattribution" />
+						<Text text="{criteresattribution}" />
+					</HBox>
+					<HBox>
+						<Label text="valeur" />
+						<Text text="{valeur}" />
+					</HBox>
+					<HBox>
+						<Label text="valeurmin" />
+						<Text text="{valeurmin}" />
+					</HBox>
+					<HBox>
+						<Label text="valeurmax" />
+						<Text text="{valeurmax}" />
+					</HBox>
+					</VBox>
+				</VBox>
+			</f:content>
+		</f:SimpleForm>
+		<f:SimpleForm id="SimpleFormDisplay3"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Modèle 03: Données relatives à la procédure de passation"
+			labelSpanXL="3"
+			labelSpanL="4"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="2"
+			emptySpanM="2"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Procedure / Critere attribution / criterescctp" />
+				<Text text="{/donnees/procedure/criteresattribution/criterescctp}" />
+				<Label text="Procedure / Critere attribution / critereslibre" />
+				<Text text="{/donnees/procedure/criteresattribution/critereslibre}" />
+
+				<Label  text="Procedure / Critere attribution / criteresponderes" />
+				<VBox items="{/donnees/procedure/criteresattribution/criteresponderes/critere}">
+					<VBox>
+					<HBox>
+						<Label text="value" />
+						<Text text="{value}" />						
+					</HBox>
+					<HBox>
+						<Label text="poids" />
+						<Text text="{poids}" />
+					</HBox>		
+					</VBox>				
+				</VBox>
+
+				<Label text="Procedure / Critere attribution / criterespriorites" />
+				<Text text="{/donnees/procedure/criteresattribution/criterespriorites}" />
+				<Label text="Procedure / Critere attribution / criteresprix" />
+				<Text text="{/donnees/procedure/criteresattribution/criteresprix}" />
+			</f:content>
+		</f:SimpleForm>
+		
+		<f:SimpleForm id="SimpleFormDisplay4"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Modèle 04: Données relatives à l'attributaire du marché"
+			labelSpanXL="3"
+			labelSpanL="4"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="2"
+			emptySpanM="2"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Attribution / Totalementinfructueux" />
+				<Text text="{/donnees/attribution/totalementinfructueux}" />
+				<Label text="Attribution / Sanssuite" />
+				<Text text="{/donnees/attribution/sanssuite}" />
+				<Label text="Attribution / attribuecomportelotinfructueux" />
+				<Text text="{/donnees/attribution/attribuecomportelotinfructueux}" />
+				<Label text="Attribution / attribueparlotsmarches" />
+				<Text text="{/donnees/attribution/attribueparlotsmarches}" />
+				<Label text="Attribution / valeurtotale" />
+				<Text text="{/donnees/attribution/valeurtotale}" />
+				<Label text="Attribution / offrebasse" />
+				<Text text="{/donnees/attribution/offrebasse}" />
+				<Label text="Attribution / offreelevee" />
+				<Text text="{/donnees/attribution/offreelevee}" />
+				<Label text="Attribution / datedecision" />
+				<Text text="{/donnees/attribution/datedecision}" />
+			</f:content>
+		</f:SimpleForm>
+		<f:SimpleForm id="SimpleFormDisplay5"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="Modèle 05: Détail de l'attribution"
+			labelSpanXL="3"
+			labelSpanL="4"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="2"
+			emptySpanM="2"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="titulaireandRENSEIGNEMENT / denomination" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/0/denomination}" />
+				<Label text="titulaireandRENSEIGNEMENT / adresse" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/0/adresse} {/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/0/cp} {/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/0/ville}" />
+				<Label text="titulaireandRENSEIGNEMENT / dateattribution" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/dateattribution}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / nboffrerecu" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/nboffrerecu}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / groupementeconomique" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/groupementeconomique}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / montantindefini" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/montantindefini}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / estimationinitiale" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/estimationinitiale}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / Montant" />
+				<Text text=" {/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/montant/value} {/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/montant/devise}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / montantmini" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/montantmini}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / montantmaxi" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/montantmaxi}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / nbannee" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/nbannee}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / nbmois" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/nbmois}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / offrebasse" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/offrebasse}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / offreelevee" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/offreelevee}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / soustraitanceoui" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/soustraitanceoui}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / soustraitancenon" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/soustraitancenon}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / nbmarcheattribue" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/nbmarcheattribue}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / offrebassenonretenueoui" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/offrebassenonretenueoui}" />
+
+				<Label text="titulaireandRENSEIGNEMENT / offrebassenonretenuenon" />
+				<Text text="{/donnees/attribution/decision/0/titulaireandRENSEIGNEMENT/1/offrebassenonretenuenon}" />
+			</f:content>
+		</f:SimpleForm>
+	</Page>
+</mvc:View>

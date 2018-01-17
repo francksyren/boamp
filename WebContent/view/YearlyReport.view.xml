@@ -1,0 +1,122 @@
+<mvc:View
+	controllerName="sap.ui.demo.wt.controller.YearlyReport"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>detailPageTitle}">
+	<Table id="idReportTable"
+		inset="false"
+		items="{
+			path: '/reports'
+		}">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="Avis" level="H2"/>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button	icon="sap-icon://download" press="onDataExport" />
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column
+				width="8em">
+				<Text text="idweb" />
+			</Column>
+			<Column
+				width="8em">
+				<Text text="Date Publication" />
+			</Column>
+			<Column
+				width="8em">
+				<Text text="CPV" />
+			</Column>
+			<Column
+				width="8em">
+				<Text text="Valeur" />
+			</Column>			
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text text="Object Complet" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="End">
+				<Text text="Travaux" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="End">
+				<Text text="Service" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="End">
+				<Text text="Achat" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="End">
+				<Text text="Loc" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="End">
+				<Text text="Credit Bail" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="End">
+				<Text text="Loc Vente" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				hAlign="End">
+				<Text text="Plusieurs formes" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem id="listItem">
+				<cells>
+					<Text
+						text="{gestion/reference/idweb}"/>
+					<Text
+						text="{
+							path: 'gestion/indexation/datepublication',
+							formatter: '.formatDate'
+							
+						}"/>
+					<Text
+						text="{donnees/objet/0/cpv/0/principal}"/>
+					<Text
+						text="{donnees/objet/0/caracteristiques/valeur}"/>						
+					<Text
+						text="{donnees/objet/0/typemarche/objectcomplet}" />
+					<Text
+						text="{donnees/objet/0/typemarche/travaux}" />
+					<Text
+						text="{donnees/objet/0/typemarche/service}" />
+
+					<Text
+						text="{donnees/objet/0/typemarche/fournitures/achat}" />
+					<Text
+						text="{donnees/objet/0/typemarche/fournitures/loc}" />
+					<Text
+						text="{donnees/objet/0/typemarche/fournitures/creditbail}" />
+					<Text
+						text="{donnees/objet/0/typemarche/fournitures/locvente}" />
+					<Text
+						text="{donnees/objet/0/typemarche/fournitures/plusieursformes}" />
+
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+	</Page>
+</mvc:View>
